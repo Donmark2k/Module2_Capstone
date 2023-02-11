@@ -40,6 +40,59 @@ ul {
    margin: 0 auto;
  }
 
+ .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 4fr));
+  column-gap: 24px;
+  row-gap: 24px;
+  width: 100%;
+  margin: 24px auto 24px auto;
+  list-style-type: none;
+}
+.article {
+  background-color:  #a3a375;
+  padding: 8px;
+  border-radius: 8px; 
+}
+
+.name p {
+margin: 0;
+padding: 0;
+text-align: center;
+}
+
+#heart {
+  color: rgb(7, 155, 204);
+}
+.like-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin:  4px auto;
+  width: 40%;
+}
+
+.like-row p {
+  padding: 0;
+  margin: 0;
+}
+
+.button-row {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+}
+
+#reserve, #comment {
+  border-radius: 8px;
+  height: 30px;
+  width: auto;
+  padding: 4px 12px;
+  border: 2px solid #d6d6c2;
+  background-color: #d6d6c2;
+}
+
  footer {
   display: flex;
   width: 100%;

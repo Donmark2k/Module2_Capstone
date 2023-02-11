@@ -116,7 +116,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n//# sourceURL=webpack://todo_list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/api.js */ \"./src/modules/api.js\");\n/* harmony import */ var _modules_homePageLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/homePageLayout */ \"./src/modules/homePageLayout.js\");\n\n\n\n\n\nconst movies = async () => {\n    const res = await fetch ( _modules_api_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"] );\n    const data = await res.json();\n    return data;\n}\n\nmovies().then((movie) => {\n    movie.map((each, index) => {\n        ;(0,_modules_homePageLayout__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(each);\n        const wrapper = document.querySelector('.wrapper')\n        const num = document.querySelectorAll('.total')\n        movieCount (wrapper , num) \n        const heart = document.querySelectorAll ('#heart')\n        fetchLike(card)\n        newLike ( heart, index, each.show.id);\n\n        return each;\n    })\n})\n\n\n\nconst getId = async () => {\n    const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/',\n      { method: 'post' });\n    const data = await res.text();\n    return data;\n  };\n  \n  getId();\n  \n\n//# sourceURL=webpack://todo_list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/api.js":
+/*!****************************!*\
+  !*** ./src/modules/api.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst movieUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (movieUrl);\n\n//# sourceURL=webpack://todo_list/./src/modules/api.js?");
+
+/***/ }),
+
+/***/ "./src/modules/homePageLayout.js":
+/*!***************************************!*\
+  !*** ./src/modules/homePageLayout.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst layout = (array) => {\r\n    const wrapper = document.querySelector('.wrapper');\r\n    const template = `\r\n    <div class=\"desc\">\r\n    <div class=\"img\">\r\n          <img src=${array.show.image.medium}>\r\n    </div>\r\n     <div class=\"name\">\r\n     <p> ${array.show.name}</p>\r\n     <p> <i class=\"fa-solid fa-heart\" id=\"heart\"></i> </p>\r\n     </div>\r\n     <p class=\"likes\">\r\n     <span class='like'>0</span> likes\r\n     </p>\r\n    </div>\r\n    <button id=\"comment\" data-id = ${array.show.id}>comments</button>\r\n    <button id=\"reserve\" data-id = ${array.show.id}> reservation</button>    \r\n    \r\n    `;\r\n\r\n\r\n    const list = document.createElement('li');\r\n    list.setAttribute('data-id', array.show.id);\r\n    list.classList.add('list')\r\n    list.innerHTML = template;\r\n    wrapper.appendChild(list)\r\n\r\n}\r\n\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (layout);\n\n//# sourceURL=webpack://todo_list/./src/modules/homePageLayout.js?");
 
 /***/ })
 
