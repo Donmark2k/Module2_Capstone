@@ -19,7 +19,7 @@ movies().then((movie) => {
     movie.map((each, index) => {
         layout(each);
         const wrapper = document.querySelector('.wrapper')
-        const num = document.querySelectorAll('.total')
+        const num = document.querySelector('.total')
         movieCount (wrapper , num) 
         const heart = document.querySelectorAll ('#heart')
         const card = document.querySelectorAll('.list');
@@ -51,9 +51,9 @@ movies().then((movie) => {
                     comsec.innerHTML ='';
                     lists.map((e)=> listLayOut(e, comsec));
                     form.reset();
-                    // const header = document.querySelector('.head');
-                    // const test = document.querySelector('.test')
-                    //  movieCount(test, header)
+                    const header = document.querySelector('.head');
+                    const test = document.querySelector('.test')
+                     movieCount(test, header)
                 });
 
                 // Cancel the pop up icon
@@ -100,9 +100,9 @@ movies().then((movie) => {
          sDate.value = '';
          eDate.value = '';
 
-        //  const header = document.querySelector('.head');
-        //  const test = document.querySelector('.test');
-        //  moviecount(test, header);
+         const header = document.querySelector('.head');
+         const test = document.querySelector('.test');
+         moviecount(test, header);
        });
        // to cancel the pop up
        const X = document.querySelector('.X');
