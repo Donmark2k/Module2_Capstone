@@ -34,7 +34,7 @@ movies().then((movie) => {
                     const lists = [];
                     popUp(each, 'comment');
                     commentForm();
-                    // fetchCommentApi(each.show.id, lists)
+                    fetchCommentApi(each.show.id, lists)
 
                 // Collect form inputs
                 const form = document.querySelector('form');
