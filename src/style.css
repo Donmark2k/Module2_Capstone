@@ -94,7 +94,83 @@ text-align: center;
   padding: 4px 12px;
   border: 2px solid #d6d6c2;
   background-color: #d6d6c2;
+  cursor: pointer;
 }
+.pop {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(250, 235, 215, 0.922);
+  z-index: 99;
+  padding: 0.5rem;
+  overflow-y: scroll;
+  height: 100%;
+}
+.pup {
+  border: 2px solid black;
+  padding: 1rem;
+  position: relative;
+  border-radius: 12px;
+}
+.fa-x {
+  display: block;
+  color: red;
+  font-size: 25px;
+  align-self: flex-end;
+  margin-bottom: 12px;
+  margin-left: 90%;
+}
+
+.X {
+  display: flex;
+  position: absolute;
+  margin-bottom: 120px;
+  cursor: pointer;
+  z-index: 444;
+  width: 100%;
+}
+
+#img-summary {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  background-color: orange;
+  margin: 12px auto 12px auto;
+  padding-top: 12px;
+}
+
+.popup-image {
+  width: 28%;
+}
+
+.name-summary{
+  width: 70%;
+}
+form {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ h4 {
+   text-align: center;
+ }
+
+#reserve-btn, #comment-btn {
+  color: black;
+  height: 30px;
+  box-shadow: 2px 4px black;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 4px 8px;
+  margin-top: 12px;
+  align-self: center;
+  width: auto;
+}
+
 
  footer {
   display: flex;
