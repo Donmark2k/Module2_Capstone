@@ -21,7 +21,7 @@ const layout = (array) => {
     list.setAttribute('data-id', array.show.id);
     list.classList.add('list')
     list.innerHTML = template;
-    wrapper.appendChild(list)
+     wrapper.appendChild(list);
 
 }
 
