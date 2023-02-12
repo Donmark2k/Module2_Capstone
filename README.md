@@ -121,7 +121,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- > Add a link to your deployed project. -->
 
-- [Live Demo Link](https://AbdimulhinYussuf3675.github.io/Module2_capstune_Project/dist/)
+- [Live Demo Link]( https://donmark2k.github.io/Module2_Capstone/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,7 +150,7 @@ Example command:
 ### Setup
 
 Clone this repository to your desired folder:
-https://github.com/AbdimulhinYussuf3675/Module2_capstune_Project.git
+ https://donmark2k.github.io/Module2_Capstone/.git
 
 
 Example commands:

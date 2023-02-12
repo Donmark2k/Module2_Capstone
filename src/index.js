@@ -6,7 +6,7 @@ import {fetchLike, newLike} from './modules/fetchlike.js';
 import { commentForm, reserveForm} from './modules/popForm.js';
 import {resLayout, listLayOut} from './modules/resCommentLayout.js';
 import  {fetchCommentApi, fetchResApi} from './modules/formApi.js';
-import addComment from './modules/addResComment.js';
+import {addReserve, addComment} from './modules/addResComment.js';
 import popUp from './modules/popUp.js';
 
 const movies = async () => {
@@ -51,9 +51,9 @@ movies().then((movie) => {
                     comsec.innerHTML ='';
                     lists.map((e)=> listLayOut(e, comsec));
                     form.reset();
-                    const header = document.querySelector('.head');
-                    const test = document.querySelector('.test')
-                     movieCount(test, header)
+                    // const header = document.querySelector('.head');
+                    // const test = document.querySelector('.test')
+                    //  movieCount(test, header)
                 });
 
                 // Cancel the pop up icon
@@ -67,7 +67,54 @@ movies().then((movie) => {
                 }
             })
         })
+ // Reserve Event listeners start here
+ const reserve = document.querySelectorAll('#reserve');
+ reserve.forEach((res, ind) => {
+   res.addEventListener('click', () => {
+     if (index === ind) {
+       const listr = [];
+       popUp(each, 'reservation');
+       reserveForm();
+       // fetch api
+       fetchResApi(each.show.id, listr);
 
+       // add reservation
+       const form = document.querySelector('form');
+       const user = document.querySelector('#name');
+       const sDate = document.querySelector('#start-date');
+       const eDate = document.querySelector('#end-date');
+       const comsec = document.querySelector('.test');
+
+       form.addEventListener('submit', (e) => {
+         e.preventDefault();
+         if (user.value === '' || sDate.value === '' || eDate === '') {
+           return;
+         }
+         addReserve(each.show.id, user.value, sDate.value, eDate.value);
+         listr.push({
+           creation_date: 'few minutes ago', username: user.value, date_start: sDate.value, date_end: eDate.value,
+         });
+         comsec.innerHTML = '';
+         listr.map((e) => resLayout(e, comsec));
+         user.value = '';
+         sDate.value = '';
+         eDate.value = '';
+
+        //  const header = document.querySelector('.head');
+        //  const test = document.querySelector('.test');
+        //  moviecount(test, header);
+       });
+       // to cancel the pop up
+       const X = document.querySelector('.X');
+       X.addEventListener('click', () => {
+         const pop = document.querySelector('.pop');
+         pop.remove();
+         pop.innerrHTML = '';
+       });
+     }
+   });
+ });
+ // Reserve end here
         return each;
     })
 })
