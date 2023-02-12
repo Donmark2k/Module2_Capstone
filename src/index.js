@@ -16,7 +16,7 @@ movies().then((movie) => {
         layout(each);
         const wrapper = document.querySelector('.wrapper')
         const num = document.querySelectorAll('.total')
-        // movieCount (wrapper , num) 
+        movieCount (wrapper , num) 
         const heart = document.querySelectorAll ('#heart')
         const card = document.querySelectorAll('.list');
          fetchLike(card)

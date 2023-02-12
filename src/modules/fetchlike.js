@@ -5,7 +5,7 @@ import addLikes from './addLikes.js';
 const fetchLike = (ep) => {
     ep.forEach ((e) => {
         const likes = async () => {
-            const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/8t6g73PoMQ4PoGggqL1h/likes');
+            const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ow8CfEnAmZ2vrqFtriJY/likes');
             const predata = res.json()
             return predata;
         };
@@ -21,19 +21,19 @@ const fetchLike = (ep) => {
 }
 
 
-const newLike = (heart, index , id) => {
+const newLike = (heart, index, id) => {
     heart.forEach((heat, inde) => {
-        heat.addEventListener ('click', () => {
-            if(inde === index) {
-                addLikes ();
-                const parent = heat.parentElement.parentElement.parentElement;
-                const eachLike = parent.querySelector('.like')
-                const eachInText = eachLike.innerText
-                const increase = parseInt(eachInText, 10)+ 1;
-                eachLike.innerText = increase;
-            }
-        })
-    })
-}
+      heat.addEventListener('click', () => {
+        if (inde === index) {
+          addLikes(id);
+          const parent = heat.parentElement.parentElement.parentElement;
+          const eachlike = parent.querySelector('.like');
+          const eachIntext = eachlike.innerText;
+          const increase = parseInt(eachIntext, 10) + 1;
+          eachlike.innerText = increase;
+        }
+      });
+    });
+  };
 
 export  {fetchLike, newLike};
