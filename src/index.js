@@ -1,6 +1,8 @@
 import './style.css';
-import movieUrl from './modules/api.js'
+import { movieUrl, url } from './modules/api.js';
 import layout from './modules/homePageLayout';
+import movieCount from './modules/movieCount.js';
+import {fetchLike, newLike} from './modules/fetchlike.js';
 
 
 const movies = async () => {
@@ -12,12 +14,13 @@ const movies = async () => {
 movies().then((movie) => {
     movie.map((each, index) => {
         layout(each);
-        // const wrapper = document.querySelector('.wrapper')
-        // const num = document.querySelectorAll('.total')
+        const wrapper = document.querySelector('.wrapper')
+        const num = document.querySelectorAll('.total')
         // movieCount (wrapper , num) 
-        // const heart = document.querySelectorAll ('#heart')
-        // fetchLike(card)
-        // newLike ( heart, index, each.show.id);
+        const heart = document.querySelectorAll ('#heart')
+        const card = document.querySelectorAll('.list');
+         fetchLike(card)
+         newLike ( heart, index, each.show.id);
 
         return each;
     })

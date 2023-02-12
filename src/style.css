@@ -63,13 +63,16 @@ text-align: center;
 
 #heart {
   color: rgb(7, 155, 204);
+  cursor: pointer;
+  padding: 0;
 }
+
 .like-row {
   display: flex;
   justify-content: space-between;
   padding: 0;
   margin:  4px auto;
-  width: 40%;
+  width: 50%;
 }
 
 .like-row p {
