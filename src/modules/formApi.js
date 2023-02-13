@@ -14,6 +14,7 @@ const fetchCommentApi = (dataid, arr) => {
       listLayOut(e, comsec);
       const header = document.querySelector('.head');
       header.innerHTML = `${each.length}`;
+      return e;
     });
   });
 };

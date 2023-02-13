@@ -1,6 +1,6 @@
 import './style.css';
-import { movieUrl, url } from './modules/api.js';
-import layout from './modules/homePageLayout';
+import { movieUrl } from './modules/api.js';
+import layout from './modules/homePageLayout.js';
 import movieCount from './modules/movieCount.js';
 import { fetchLike, newLike } from './modules/fetchlike.js';
 import { commentForm, reserveForm } from './modules/popForm.js';
@@ -101,7 +101,7 @@ movies().then((movie) => {
 
             const header = document.querySelector('.head');
             const test = document.querySelector('.test');
-            moviecount(test, header);
+            movieCount(test, header);
           });
           // to cancel the pop up
           const X = document.querySelector('.X');

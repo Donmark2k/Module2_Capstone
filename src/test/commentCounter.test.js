@@ -2,7 +2,7 @@
  * @jest-environment jsdom
 */
 import movieCount from '../modules/movieCount.js';
-import { resLayout, listLayOut } from '../modules/resCommentLayout.js';
+import { listLayOut } from '../modules/resCommentLayout.js';
 
 describe('Test for comment counter', () => {
   document.body.innerHTML = `
