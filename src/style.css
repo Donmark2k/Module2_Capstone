@@ -21,17 +21,22 @@ nav {
   font-size: 24px;
 }
 
-
+.logo {
+  text-decoration: none;
+text-align: left;
+margin: auto 0;
+}
 
 ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
-  width: 35%;
+  width: 40%;
 }
- ul li a, .logo {
+ ul li a {
   text-decoration: none;
+  font-size: 2vw;
 
  }
 
@@ -185,7 +190,7 @@ form {
  footer {
   display: flex;
   width: 100%;
-  padding-left: 15%;
+  padding-left: 5%;
   margin: 0 auto;
   font-size: 18px;
   background-color: #d6d6c2;
@@ -194,4 +199,16 @@ form {
 
 footer a {
   text-decoration: none;
+  text-align: left;
 }
+
+@media (max-width: 768px) {
+  ul li a {
+    text-decoration: none;
+    font-size: 12px;
+   }
+
+   ul {
+    width: 70%;
+  }
+  }
