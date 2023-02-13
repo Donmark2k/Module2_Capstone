@@ -1,6 +1,6 @@
 const commentForm = () => {
-    const pup = document.querySelector('.pup');
-    pup.innerHTML += ` <div class="addComment">
+  const pup = document.querySelector('.pup');
+  pup.innerHTML += ` <div class="addComment">
                   <h4>Add comment</h4>
                   <form class ="comment-form">
                   <input type="text" placeholder="your name" id="name">
@@ -8,12 +8,11 @@ const commentForm = () => {
                   <button id="comment-btn">submit</button>
                 </form>
               </div>`;
-  };
-  
+};
 
 const reserveForm = () => {
-    const pup = document.querySelector('.pup');
-    pup.innerHTML += ` <div class="addReserve">
+  const pup = document.querySelector('.pup');
+  pup.innerHTML += ` <div class="addReserve">
                   <h4 class="reserve-h4">Add Reservation</h4>
                   <form class="res-form">
                   <input type="text" placeholder="your name" id="name" required>
@@ -23,6 +22,6 @@ const reserveForm = () => {
                   <button class="reserve-btn">submit</button>
                 </form>
               </div>`;
-  };
-  
-  export  {commentForm,reserveForm};
+};
+
+export { commentForm, reserveForm };

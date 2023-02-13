@@ -2,14 +2,15 @@
   box-sizing: border-box;
   width: 100%;
 }
+
 body {
   background-color: #b8b894;
   margin: 0;
   padding: 0;
 }
 
-header{
-background-color: #d6d6c2;
+header {
+  background-color: #d6d6c2;
 }
 
 nav {
@@ -23,8 +24,8 @@ nav {
 
 .logo {
   text-decoration: none;
-text-align: left;
-margin: auto 0;
+  text-align: left;
+  margin: auto 0;
 }
 
 ul {
@@ -34,18 +35,23 @@ ul {
   list-style-type: none;
   width: 40%;
 }
- ul li a {
+
+footer a {
+  text-decoration: none;
+  text-align: left;
+}
+
+ul li a {
   text-decoration: none;
   font-size: 2vw;
+}
 
- }
+.main-container {
+  width: 80%;
+  margin: 0 auto;
+}
 
- .main-container {
-   width: 80%;
-   margin: 0 auto;
- }
-
- .wrapper {
+.wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 4fr));
   column-gap: 24px;
@@ -54,16 +60,17 @@ ul {
   margin: 24px auto 24px auto;
   list-style-type: none;
 }
+
 .article {
-  background-color:  #a3a375;
+  background-color: #a3a375;
   padding: 8px;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 
 .name p {
-margin: 0;
-padding: 0;
-text-align: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 #heart {
@@ -76,7 +83,7 @@ text-align: center;
   display: flex;
   justify-content: space-between;
   padding: 0;
-  margin:  4px auto;
+  margin: 4px auto;
   width: 50%;
 }
 
@@ -92,7 +99,8 @@ text-align: center;
   justify-content: space-between;
 }
 
-#reserve, #comment {
+#reserve,
+#comment {
   border-radius: 8px;
   height: 30px;
   width: auto;
@@ -101,6 +109,7 @@ text-align: center;
   background-color: #d6d6c2;
   cursor: pointer;
 }
+
 .pop {
   position: fixed;
   width: 100%;
@@ -112,12 +121,14 @@ text-align: center;
   overflow-y: scroll;
   height: 100%;
 }
+
 .pup {
   border: 2px solid black;
   padding: 1rem;
   position: relative;
   border-radius: 12px;
 }
+
 .fa-x {
   display: block;
   color: red;
@@ -148,9 +159,10 @@ text-align: center;
   width: 28%;
 }
 
-.name-summary{
+.name-summary {
   width: 70%;
 }
+
 form {
   width: 50%;
   margin: 0 auto;
@@ -158,11 +170,13 @@ form {
   flex-direction: column;
   gap: 10px;
 }
- h4 {
-   text-align: center;
- }
 
-.reserve-btn, #comment-btn {
+h4 {
+  text-align: center;
+}
+
+.reserve-btn,
+#comment-btn {
   color: black;
   height: 30px;
   box-shadow: 2px 4px black;
@@ -174,6 +188,7 @@ form {
   align-self: center;
   width: auto;
 }
+
 .list-test-reserve {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
@@ -187,28 +202,22 @@ form {
   border: 1px solid rgba(12, 12, 12, 0.1);
 }
 
- footer {
+footer {
   display: flex;
   width: 100%;
   padding-left: 5%;
   margin: 0 auto;
   font-size: 18px;
   background-color: #d6d6c2;
-
-}
-
-footer a {
-  text-decoration: none;
-  text-align: left;
 }
 
 @media (max-width: 768px) {
   ul li a {
     text-decoration: none;
     font-size: 12px;
-   }
+  }
 
-   ul {
+  ul {
     width: 70%;
   }
-  }
+}
