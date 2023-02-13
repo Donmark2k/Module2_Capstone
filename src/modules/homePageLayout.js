@@ -1,6 +1,6 @@
 const layout = (array) => {
-    const wrapper = document.querySelector('.wrapper');
-    const template = `
+  const wrapper = document.querySelector('.wrapper');
+  const template = `
     <div class="desc article">
     <div class="img">
           <img src=${array.show.image.medium}>
@@ -16,14 +16,11 @@ const layout = (array) => {
     
     `;
 
-
-    const list = document.createElement('li');
-    list.setAttribute('data-id', array.show.id);
-    list.classList.add('list')
-    list.innerHTML = template;
-     wrapper.appendChild(list);
-
-}
-
+  const list = document.createElement('li');
+  list.setAttribute('data-id', array.show.id);
+  list.classList.add('list');
+  list.innerHTML = template;
+  wrapper.appendChild(list);
+};
 
 export default layout;

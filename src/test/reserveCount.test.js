@@ -2,7 +2,7 @@
  * @jest-environment jsdom
 */
 import movieCount from '../modules/movieCount.js';
-import  {resLayout, listLayOut} from '../modules/resCommentLayout.js';
+import { resLayout, listLayOut } from '../modules/resCommentLayout.js';
 
 describe('Tests for reservation counter', () => {
   document.body.innerHTML = `
